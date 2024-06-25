@@ -15,5 +15,19 @@ module.exports = {
       'nextjs-notion-blog-starter.vercel.app',
       'prod-files-secure.s3.us-west-2.amazonaws.com'
     ]
-  }
+  },
+  css: {
+3    loader: 'css-loader',
+4    loaderOptions: {
+5      url: false,
+6    },
+7  },
+webpack: (config) => {
+config.module.rules.push({
+     test: /\.(woff|woff2|eot|ttf|otf)$/i,
+type: 'asset/resource',
+});
+    return config;
+  },
+styles: ['styles/global.css'],
 };
