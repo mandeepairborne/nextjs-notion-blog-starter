@@ -8,7 +8,7 @@ import Category from 'components/Category';
 import ArticleCard from 'components/ArticleCard';
 
 export default function Index(props) {
-  const { articles, categoriesf } = props;
+  const { articles, categories } = props;
 
   const [selectedTag, setSelectedTag] = useState<string>(null);
   const filteredArticles = filterArticles(articles, selectedTag);
